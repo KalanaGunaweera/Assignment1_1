@@ -1,6 +1,7 @@
 import com.Exception.StudentNotFoundException;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class DuplicateFinder {
@@ -55,7 +56,11 @@ public class DuplicateFinder {
 
     public void getStudentByName(String name) throws StudentNotFoundException {
         this.name = name;
-        if (student.contains(name)) {
+        List<String> name_List = new ArrayList<>();
+        for (int i = 0; i < student.size(); i++) {
+            name_List.add(student.get(i ).getName());
+        }
+        if (name_List.contains(name)) {
             System.out.println("Name is here");
         }else {
             throw new StudentNotFoundException("Name is not here");

@@ -23,7 +23,12 @@ public class Main {
             DuplicateFinder finder = new DuplicateFinder(list);
             System.out.println(finder.getDuplicates());
             System.out.println(finder.getDistintList());
+            //
+            finder.getStudentByName("Ruwan");
             finder.getStudentByName("sahan");
+
+
+
         }catch(StudentNotFoundException e){
             e.getMessage();
         }
